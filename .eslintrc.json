@@ -1,0 +1,18 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint", "eslint-plugin", "import", "solid"],
+  "extends": ["plugin:@typescript-eslint/recommended", "plugin:solid/recommended"],
+  "rules": {
+    "import/no-unresolved": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/non-nullable-type-assertion-style": "warn",
+    "eslint-plugin/meta-property-ordering": "error",
+    "eslint-plugin/report-message-format": ["error", "^[A-Z\\{'].*\\.$"],
+    "semi": "error"
+  }
+}

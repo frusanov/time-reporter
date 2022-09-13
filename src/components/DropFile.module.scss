@@ -1,0 +1,25 @@
+.dropfile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 100px;
+  min-height: 100px;
+  border: 2px rgb(102, 100, 235) solid;
+  margin: 1em;
+  border-radius: 0.5em;
+  color: rgb(102, 100, 235);
+
+  svg {
+    font-size: 32px;
+  }
+}
+
+.input {
+  display: none;
+}
+
+.dragover {
+  color:  rgb(235, 100, 100);
+  border: 2px rgb(235, 100, 100) solid;
+}

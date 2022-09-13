@@ -1,0 +1,19 @@
+.Button {
+  width: 100%;
+  border: 2px #6664eb solid;
+  margin: 0.25em 0 1em;
+  padding: 1em 0.5em;
+  border-radius: 0.5em;
+  background-color: transparent;
+  color: #6664eb;
+  font-weight: 600;
+
+  &:hover, &:focus {
+    background-color: #6664eb;
+    color: white;
+  }
+
+  &:focus {
+    outline: 1px #6664eb solid;
+  }
+}

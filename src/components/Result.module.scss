@@ -1,0 +1,28 @@
+.result {
+  max-width: calc(100% - 64px);
+  padding: 4em 0;
+}
+
+.table, .table tr, .table td {
+  font-size: 11pt;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px black solid;
+  padding: 0;
+  margin: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table td {
+  padding: .25em 1em;
+}
+
+.center {
+  text-align: center !important;
+}
+
+.Actions {
+  display: flex;
+  gap: 0.5em;
+}
