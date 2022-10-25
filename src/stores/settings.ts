@@ -2,12 +2,14 @@ import { createStore, createEvent } from 'effector';
 
 export interface Settings {
   hourPrice: number;
+  precision: number;
 } 
 
 export const SETTINGS = 'settings';
 
 const defaultSettings: Settings = {
-  hourPrice: 1000
+  hourPrice: 1000,
+  precision: 0.01,
 };
 
 const storeSettings = (settings: Partial<Settings>) => {

@@ -1,0 +1,82 @@
+@import '../styles/mixins/base-input';
+@import '../styles/mixins/has-transition';
+
+.solid-select {
+  &-container {
+    @include base-input;
+
+    position: relative;
+    font-size: 1rem;
+  }
+
+  &-container.focused {
+    box-shadow: 
+      -0.5px -0.5px 0 #6664eb,
+      0.5px -0.5px 0 #6664eb,
+      -0.5px 0.5px 0 #6664eb,
+      0.5px 0.5px 0 #6664eb;
+  }
+
+  &-control {
+    display: flex;
+    width: 100%;
+  }
+
+  &-placeholder,
+  &-single-value {
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  &-list {
+    position: absolute;
+    left: -2px;
+    right: -2px;
+    top: calc(100% - 0.5em);
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border: 2px solid;
+    border-color: #6664eb;
+    border-radius: 0 0 0.5em 0.5em;
+    border-top: none;
+
+    padding: 0.5em 0 0;
+    box-shadow: -0.5px 0.5px 0 #6664eb, 0.5px 0.5px 0 #6664eb;
+  }
+
+  &-option {
+    text-align: left;
+    padding: 1em 0.5em;
+    cursor: pointer;
+
+    @include has-transition;
+
+    &:hover,
+    &[data-focused="true"] {
+      background-color: #6664eb;
+      color: #ffffff;
+    }
+  }
+
+  &-input {
+    position: absolute;
+    opacity: 0 !important;
+    pointer-events: none;
+  }
+
+  &-label {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+
+    @include has-transition;
+
+    &:has(+ .solid-select-container.focused),
+    &:has(+ .solid-select-container:hover) {
+      color: #6664eb;
+    }
+  }
+}

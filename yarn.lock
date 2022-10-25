@@ -548,6 +548,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@thisbeyond/solid-select@npm:^0.13.0":
+  version: 0.13.0
+  resolution: "@thisbeyond/solid-select@npm:0.13.0"
+  peerDependencies:
+    solid-js: ^1.5
+  checksum: fcc03fe5d7d412f264c5abaad807b74f1e4d639936849b101f1ac2004b79f818df057a23bb8f91f0a9b2ed9d77fa996445f6a0bad390d5478257be1b467ef047
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:2":
   version: 2.0.0
   resolution: "@tootallnate/once@npm:2.0.0"
@@ -3716,6 +3725,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "vite-template-solid@workspace:."
   dependencies:
+    "@thisbeyond/solid-select": ^0.13.0
     "@types/dropzone": ^5.7.4
     "@types/papaparse": ^5.3.5
     "@types/uuid": ^8.3.4

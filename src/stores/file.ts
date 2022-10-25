@@ -1,6 +1,7 @@
 import { createStore, createEvent } from 'effector';
 import * as Papa from 'papaparse';
-import { changeStep, Step } from './step';
+import { round } from '../utils/round';
+import { $settings } from './settings';
 
 export interface ResultItem {
   time: number;
@@ -10,10 +11,14 @@ export interface ResultItem {
 export type ResultData = Record<string, ResultItem>
 
 export const changeFile = createEvent<File>();
-export const $file = createStore<File | null>(null).on(changeFile, (_, file)=> {
-  parse(file);
-  return file;
-});
+export const parseFile = createEvent();
+export const $file = createStore<File | null>(null)
+  .on(changeFile, (_, file) => file)
+  .on(parseFile, ()=> {
+    const file = $file.getState()! as File;
+    parse(file);
+    return file;
+  });
 
 export const changeTotalHours = createEvent<number>();
 export const $totalHours = createStore<number>(0).on(changeTotalHours, (_, hours) => hours);
@@ -30,7 +35,7 @@ function parse(file: File) {
     complete: (result) => {
       result.data.forEach((row: any) => {
         const issue = row['Issue Key'];
-        const time = parseFloat(row['Time Spent (h)']);
+        const time = round(parseFloat(row['Time Spent (h)']), $settings.getState().precision);
         const description = row['Issue Summary'] ?? '';
 
         if (!issue || !time) return;
@@ -46,13 +51,10 @@ function parse(file: File) {
           };
         }
       });
-
-      console.log('data', data);
       
-
       changeParsedFile(data);
       changeTotalHours(total);
-      changeStep(Step.settings);
+      // changeStep(Step.settings);
     }
   });
 }

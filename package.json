@@ -26,6 +26,7 @@
     "vite-plugin-solid": "^2.3.0"
   },
   "dependencies": {
+    "@thisbeyond/solid-select": "^0.13.0",
     "@typescript-eslint/parser": "^5.37.0",
     "copy-rich-text": "^0.2.0",
     "effector": "^22.3.0",
