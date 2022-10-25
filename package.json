@@ -33,7 +33,7 @@
     "effector-solid": "^0.22.6",
     "papaparse": "^5.3.2",
     "reseter.css": "^2.0.0",
-    "solid-js": "^1.5.1",
+    "solid-js": "1.5.9",
     "uuid": "^9.0.0"
   }
 }
