@@ -1,4 +1,4 @@
-import { createStore, createEvent, forward } from 'effector';
+import { createStore, createEvent } from 'effector';
 import * as Papa from 'papaparse';
 import { changeStep, Step } from './step';
 

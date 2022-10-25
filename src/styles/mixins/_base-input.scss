@@ -1,0 +1,18 @@
+@import './has-transition';
+
+@mixin base-input {
+  width: 100%;
+  border: 2px #6664eb solid;
+  margin: 0.25em 0 1em;
+  padding: 1em 0.5em;
+  border-radius: 0.5em;
+  background-color: transparent;
+  color: #6664eb;
+  font-weight: 600;
+
+  @include has-transition;
+
+  &:focus {
+    outline: 1px #6664eb solid;
+  }
+}

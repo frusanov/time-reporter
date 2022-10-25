@@ -1,0 +1,18 @@
+@import '../styles/mixins/base-input';
+@import '../styles/mixins/has-transition';
+
+.Input {
+  @include base-input;
+}
+
+.Label {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+
+  @include has-transition;
+
+  &:has(+ input:focus), &:has(+ input:hover) {
+    color: #6664eb;
+  }
+}

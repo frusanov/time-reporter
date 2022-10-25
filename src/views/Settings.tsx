@@ -1,11 +1,10 @@
 import { Component, createSignal } from 'solid-js';
-import Button from './Button';
+import Button from '../components/Button';
 import styles from './Settings.module.scss';
 import { useUnit } from 'effector-solid';
 import { $settings, changeSettings } from '../stores/settings';
 import { changeStep, Step } from '../stores/step';
-
-const HOUR_PRICE = 'hourPrice';
+import Input from '../components/Input';
 
 const Settings: Component = () => {
   const settings = useUnit($settings);
@@ -21,8 +20,12 @@ const Settings: Component = () => {
 
   return (
     <div class={styles.Settings}>
-      <label for={HOUR_PRICE}>Стоимость часа</label>
-      <input id={HOUR_PRICE} type={'number'} value={hourPrice()} onInput={(e)=> setHourPrice(parseInt(e.currentTarget.value))}  />
+      <Input
+        label={'Стоимость часа'}
+        type={'number'}
+        defaultValue={hourPrice().toString()}
+        onChange={setHourPrice}
+      />
       <Button onClick={handleSave}>Сохранить и продолжить</Button>
     </div>
   );

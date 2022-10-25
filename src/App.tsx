@@ -1,13 +1,10 @@
-import { Component, createSignal } from 'solid-js';
-import styles from './App.module.css';
-import DropFile from './components/DropFile';
-import * as Papa from 'papaparse';
-import Result from './components/Result';
-import Settings from './components/Settings';
+import { Component } from 'solid-js';
+import styles from './styles/App.module.scss';
+import DropFile from './views/DropFile';
+import Result from './views/Result';
+import Settings from './views/Settings';
 import { useUnit } from 'effector-solid';
 import { $step, Step } from './stores/step';
-
-
 
 const App: Component = () => {
   const step = useUnit($step);

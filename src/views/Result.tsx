@@ -1,14 +1,14 @@
 import { Component, For } from 'solid-js';
 import { useUnit } from 'effector-solid';
 import copy from 'copy-rich-text';
-import Button from './Button';
+import Button from '../components/Button';
 import styles from './Result.module.scss';
 import { $parsedFile, $totalHours } from '../stores/file';
 import { $settings } from '../stores/settings';
 import { changeStep, Step } from '../stores/step';
 
 const Result: Component = () => {
-  let table;
+  let table: any;
 
   const {
     parsedFile,
