@@ -1,34 +1,22 @@
-## Usage
+# [Генератор отчетов](https://frusanov.github.io/time-reporter/) для расширения [TimeTracker](https://marketplace.atlassian.com/apps/1211243) в Jira
 
-Those templates dependencies are maintained via [pnpm](https://pnpm.io) via `pnpm up -Lri`.
+## Использование
+⏲️ В расширении TimeTracker перейдите в раздел Reports  
+📅 Выберете необходимый диапозон дат  
+✅ Создайте отчет  
+📤 Экспортируйте отчет в CSV  
+📥 Загрузите отчет на [frusanov.github.io/time-reporter/]()  
+⚙️ Задайте настройки  
+📋 Нажмите `копировать содержимое`  
+🎇 Вставте готовую таблицу в любой текстовой процессор, например Microsoft Word
 
-This is the reason you see a `pnpm-lock.yaml`. That being said, any package manager will work. This file can be safely be removed once you clone a template.
+## Коллаборация
+Сообщить о баге или предложить идею вы можете через Issues  
 
-```bash
-$ npm install # or pnpm install or yarn install
-```
+Если решите поучавствовать в написании кода, пожалуйста используйте в качестве менеджера пакетов [yarn](https://yarnpkg.com/getting-started/install)
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm dev` or `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-You can deploy the `dist` folder to any static host provider (netlify, surge, now, etc.)
+## Используемые технологии
+- Фреймворк: [SolidJS](https://www.solidjs.com/)
+- Стили: SCSS Modules
+- Парсинг таблиц: [PapaParse](https://www.papaparse.com/)
+- Состояние приложения: [Effector](https://effector.dev/)
